@@ -4,7 +4,7 @@
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "0",
-        "reg_link": "loop"
+        "reg_link": "record"
     },
     {
         "name": "Button 1",
@@ -18,126 +18,126 @@
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "2",
-        "reg_link": "Bad.pre"
+        "reg_link": "loop"
     },
     {
         "name": "Button 3",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "3",
-        "reg_link": "Delay2.pd"
+        "reg_link": "save"
     },
     {
         "name": "Button 4",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "4",
-        "reg_link": "Bad.pre"
+        "reg_link": ""
     },
     {
         "name": "Button 5",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "5",
-        "reg_link": "Delay2.pd"
+        "reg_link": "Recording_3.wav"
     },
     {
         "name": "Button 6",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "6",
-        "reg_link": "Bad.pre"
+        "reg_link": ""
     },
     {
         "name": "Button 7",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "7",
-        "reg_link": "Delay2.pd"
+        "reg_link": ""
     },
     {
         "name": "Button 8",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "8",
-        "reg_link": "Bad.pre"
+        "reg_link": ""
     },
     {
         "name": "Button 9",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "9",
-        "reg_link": "Delay2.pd"
+        "reg_link": ""
     },
     {
         "name": "Button q",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "q",
-        "reg_link": "Bad.pre"
+        "reg_link": ""
     },
     {
         "name": "Button w",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "w",
-        "reg_link": "Delay2.pd"
+        "reg_link": ""
     },
     {
         "name": "Button e",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "e",
-        "reg_link": "Bad.pre"
+        "reg_link": ""
     },
     {
         "name": "Button r",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "r",
-        "reg_link": "Delay2.pd"
+        "reg_link": ""
     },
     {
         "name": "Button t",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "t",
-        "reg_link": "Bad.pre"
+        "reg_link": ""
     },
     {
         "name": "Button y",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "y",
-        "reg_link": "Delay2.pd"
+        "reg_link": ""
     },
     {
         "name": "Button u",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "u",
-        "reg_link": "Bad.pre"
+        "reg_link": ""
     },
     {
         "name": "Button i",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "i",
-        "reg_link": "Delay2.pd"
+        "reg_link": ""
     },
     {
         "name": "Button o",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "o",
-        "reg_link": "loop"
+        "reg_link": ""
     },
     {
         "name": "Button p",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "p",
-        "reg_link": "save"
+        "reg_link": ""
     },
     {
         "name": "Encoder a-s",
@@ -145,7 +145,7 @@
         "mechanism": "key_interrupt",
         "left_trigger": "a",
         "right_trigger": "s",
-        "reg_link": "Bad.pre"
+        "reg_link": ""
     },
     {
         "name": "Encoder d-f",
@@ -153,6 +153,22 @@
         "mechanism": "key_interrupt",
         "left_trigger": "d",
         "right_trigger": "f",
-        "reg_link": "Bad.pre"
+        "reg_link": ""
+    },
+    {
+        "name": "Encoder g-h",
+        "type": "encoder",
+        "mechanism": "key_interrupt",
+        "left_trigger": "g",
+        "right_trigger": "h",
+        "reg_link": ""
+    },
+    {
+        "name": "Encoder j-k",
+        "type": "encoder",
+        "mechanism": "key_interrupt",
+        "left_trigger": "j",
+        "right_trigger": "k",
+        "reg_link": ""
     }
 ]

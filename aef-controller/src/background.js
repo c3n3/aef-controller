@@ -64,6 +64,16 @@ app.on('ready', async () => {
   createWindow()
 })
 
+import functions from './functions.js'
+
+app.on('before-quit', async (event) => {
+  event.preventDefault()
+  console.log("Ending")
+  functions.end()
+  app.exit(0)
+});
+app.allowRendererProcessReuse = false
+
 // Exit cleanly on request from parent process in development mode.
 if (isDevelopment) {
   if (process.platform === 'win32') {
