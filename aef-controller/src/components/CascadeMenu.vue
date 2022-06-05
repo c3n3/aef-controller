@@ -47,7 +47,7 @@ export default {
         filterItems: function(types) {
             let self = this
             return Object.fromEntries(Object.entries(types).
-                filter(([key, val]) => Object.keys(self.filterCommands(val)).length > 1));
+                filter(([key, val]) => Object.keys(self.filterCommands(val)).length > 0));
         },
         filterCommands: function(commands) {
             let self = this
@@ -58,12 +58,6 @@ export default {
             console.log(this.zmq.inputs)
             this.zmq.change(name, value)
         }
-  },
-  watch: {
-    'zmq.update' (newVal) {
-        console.log("This has worked??")
-      this.$forceUpdate()
-    }
   }
 }
 </script>

@@ -32,42 +32,42 @@
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "4",
-        "reg_link": ""
+        "reg_link": "8bit.pd"
     },
     {
         "name": "Button 5",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "5",
-        "reg_link": "Recording_3.wav"
+        "reg_link": "Clean.pre"
     },
     {
         "name": "Button 6",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "6",
-        "reg_link": ""
+        "reg_link": "Viola.pd"
     },
     {
         "name": "Button 7",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "7",
-        "reg_link": ""
+        "reg_link": "21Guns.pre"
     },
     {
         "name": "Button 8",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "8",
-        "reg_link": ""
+        "reg_link": "Tremolo.pd"
     },
     {
         "name": "Button 9",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "9",
-        "reg_link": ""
+        "reg_link": "21Guns.pre"
     },
     {
         "name": "Button q",
@@ -145,7 +145,7 @@
         "mechanism": "key_interrupt",
         "left_trigger": "a",
         "right_trigger": "s",
-        "reg_link": ""
+        "reg_link": "__8bit__distortion"
     },
     {
         "name": "Encoder d-f",
@@ -153,7 +153,7 @@
         "mechanism": "key_interrupt",
         "left_trigger": "d",
         "right_trigger": "f",
-        "reg_link": ""
+        "reg_link": "volume"
     },
     {
         "name": "Encoder g-h",
@@ -161,7 +161,7 @@
         "mechanism": "key_interrupt",
         "left_trigger": "g",
         "right_trigger": "h",
-        "reg_link": ""
+        "reg_link": "__Tremolo__osc_rate"
     },
     {
         "name": "Encoder j-k",
