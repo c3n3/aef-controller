@@ -4,18 +4,20 @@
       <ChangeableList :zmq="zmq" type="button" :inputs="zmq.inputs"/>
       <ChangeableList :zmq="zmq" type="encoder" :inputs="zmq.inputs"/>
   </div>
+  <Buttons :zmq="zmq" :itemsJson="zmq.commands" />
 </div>
 </template>
 
 <script>
 import ChangeableList from './components/ChangableList.vue'
+import Buttons from './components/Buttons.vue'
 import functions from './functions.js'
-import inputjson from './input.json'
 
 export default {
   name: 'App',
   components: {
-    ChangeableList
+    ChangeableList,
+    Buttons
   },
   mounted() {
     this.zmq.init(this)
@@ -60,5 +62,18 @@ export default {
   color:lightcyan;
   background: slategrey;
 }
-
+.custom-button {
+  background: maroon;
+  color: antiquewhite;
+  border: solid blue 1px;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  user-select: none; /* Standard */
+}
+.custom-button:active {
+  background: blue;
+}
 </style>
