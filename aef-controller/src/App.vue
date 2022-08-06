@@ -1,17 +1,18 @@
 <template>
 <div>
   <div class="main" v-if="reset">
-      <ChangeableList :zmq="zmq" type="button" :inputs="zmq.inputs"/>
-      <ChangeableList :zmq="zmq" type="encoder" :inputs="zmq.inputs"/>
+      <ChangeableList :pycomm="pycomm" type="button"/>
+      <ChangeableList :pycomm="pycomm" type="encoder"/>
   </div>
-  <Buttons :zmq="zmq" :itemsJson="zmq.commands" />
+  <Buttons :pycomm="pycomm" :itemsJson="pycomm.commands" />
 </div>
 </template>
 
 <script>
 import ChangeableList from './components/ChangableList.vue'
 import Buttons from './components/Buttons.vue'
-import functions from './functions.js'
+import common from './common.js'
+import pycomm from './pycomm.js'
 
 export default {
   name: 'App',
@@ -20,11 +21,11 @@ export default {
     Buttons
   },
   mounted() {
-    this.zmq.init(this)
+    this.pycomm.init(this)
     setTimeout(() => {
       console.log("Re render")
       this.reset = false;
-      console.log(this.zmq.inputs)
+      console.log(this.pycomm.inputs)
       this.$nextTick(() => {
           // Add the component back in
           this.reset = true;
@@ -33,8 +34,8 @@ export default {
   },
   data() {
     return {
-      zmq: functions,
-      functions: functions,
+      pycomm: pycomm,
+      common: common,
       json: {},
       reset: true
     }

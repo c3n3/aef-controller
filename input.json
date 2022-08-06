@@ -4,14 +4,14 @@
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "0",
-        "reg_link": "record"
+        "reg_link": "Recording_12.wav"
     },
     {
         "name": "Button 1",
         "type": "button",
         "mechanism": "key_interrupt",
         "trigger": "1",
-        "reg_link": "Delay2.pd"
+        "reg_link": "Reverb.pd"
     },
     {
         "name": "Button 2",
@@ -145,7 +145,7 @@
         "mechanism": "key_interrupt",
         "left_trigger": "a",
         "right_trigger": "s",
-        "reg_link": "__8bit__distortion"
+        "reg_link": "volume"
     },
     {
         "name": "Encoder d-f",
@@ -161,7 +161,7 @@
         "mechanism": "key_interrupt",
         "left_trigger": "g",
         "right_trigger": "h",
-        "reg_link": "__Tremolo__osc_rate"
+        "reg_link": "volume"
     },
     {
         "name": "Encoder j-k",

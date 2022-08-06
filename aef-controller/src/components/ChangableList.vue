@@ -2,10 +2,10 @@
 <div class="list-container-container">
   <h3>{{prettyName(type)}}s</h3>
   <nav class="list-container">
-    <div v-for="input, index in zmq.inputs" :key="index" class="list">
+    <div v-for="input, index in pycomm.inputs" :key="index" class="list">
       <div v-if="input['type'] == type" class="item">
-        <div class="item-name">{{zmq.prettyName(input['name'])}}</div>
-        <CascadeMenu :zmq="zmq" :itemsJson="zmq.commands" :value="input['reg_link']" :type="type" :name="input['name']"/>
+        <div class="item-name">{{prettyName(input['name'])}}</div>
+        <CascadeMenu :pycomm="pycomm" :itemsJson="pycomm.commands" :value="input['reg_link']" :type="type" :name="input['name']"/>
       </div>
     </div>
   </nav>
@@ -15,7 +15,7 @@
 <script>
 
 import CascadeMenu from './CascadeMenu.vue'
-import functions from "../functions.js"
+import common from "../common.js"
 
 export default {
   name: 'ChangeableList',
@@ -25,20 +25,20 @@ export default {
   },
   props: {
     type: String,
-    zmq: {},
+    pycomm: {},
   },
   components: {
     CascadeMenu
   },
   methods: {
-    prettyName: functions.prettyName,
+    prettyName: common.prettyName,
     print: function () {
-      console.log(this.zmq.inputs)
-      console.log(this.zmq.commands)
+      console.log(this.pycomm.inputs)
+      console.log(this.pycomm.commands)
     }
   },
   watch: {
-    'zmq.update' (newVal) {
+    'pycomm.update' (newVal) {
       this.$forceUpdate()
     }
   }

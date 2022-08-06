@@ -5,7 +5,7 @@
         <div class="custom-button" @click="show=!show"> {{show ? "Hide" : "Show" }} buttons </div>
         <div v-if="show" name="devices" id="devices" class="command-type">
             <div v-for="(commands, commandType) in filterItems(itemsJson)" :key="commandType" :label="prettyName(commandType)">
-                {{zmq.prettyName(commandType)}}
+                {{prettyName(commandType)}}
                 <div class="custom-button" v-for="(sub, command) in filterCommands(commands)" @click="clicked(command)">
                     {{prettyName(command)}}
                 </div>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import functions from "../functions.js"
+import common from "../common.js"
 
 export default {
   name: 'Buttons',
@@ -24,7 +24,7 @@ export default {
     itemsJson: {},
     value: "",
     name: "",
-    zmq: "",
+    pycomm: "",
   },
   components: {
       },
@@ -32,7 +32,7 @@ export default {
       return {
           type: "button",
           show: false,
-          prettyName: functions.prettyName,
+          prettyName: common.prettyName,
       }
   },
   mounted() {

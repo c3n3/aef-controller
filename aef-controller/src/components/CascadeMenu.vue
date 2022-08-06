@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import functions from "../functions.js"
+import common from "../common.js"
 
 export default {
   name: 'CascadeMenu',
@@ -22,7 +22,7 @@ export default {
     type: "",
     value: "",
     name: "",
-    zmq: "",
+    pycomm: "",
   },
   components: {
   },
@@ -30,8 +30,7 @@ export default {
       return {
           defaultValue: "Select",
           show: false,
-          prettyName: functions.prettyName,
-          send: functions.change
+          prettyName: common.prettyName,
       }
   },
   mounted() {
@@ -55,8 +54,8 @@ export default {
                 filter(([key, val]) => val['input_type'] == self.type));
         },
         change(name, value) {
-            console.log(this.zmq.inputs)
-            this.zmq.change(name, value)
+            console.log(this.pycomm.inputs)
+            this.pycomm.change(name, value)
         }
   }
 }

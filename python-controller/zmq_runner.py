@@ -27,8 +27,9 @@ class Updator():
         print("Sending cmd", cmd)
         pubsub.send(cmd)
 
+# TODO: This is incompatable with bluetooth
 # Update whenever ther is a new command incoming
-aitpi.PostalService.addConsumer([aitpi.FolderMessage.msgId], aitpi.PostalService.GLOBAL_SUBSCRIPTION, Updator)
+aitpi.router.addConsumer([aitpi.FolderMessage.msgId], Updator)
 
 try:
     while (not shouldStop):
@@ -47,7 +48,7 @@ try:
             print("Sending cmd", cmd)
             pubsub.send(cmd)
         elif (data['command'] == 'change'):
-            aef.changeLink(data['name'], data['value'])
+            interface.update(data['name'], data['value'])
         elif (data['command'] == 'shutdown'):
             break
         elif (data['command'] == 'ping'):
